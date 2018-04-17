@@ -1,0 +1,23 @@
+<% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+      <%= value %>
+      </div>
+      <% end %>
+<table class="show-table">
+  <tbody>
+    <tr>
+      <td class="fw-b">Title:</td>
+      <td><%= @booker.title %></td>
+    </tr>
+    <tr>
+      <td class="fw-b">Body:</td>
+      <td><%= @booker.body %></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div class="ml20">
+	<%= link_to "Edit", edit_booker_path(@booker) %>
+	|
+	<%= link_to "Back", bookers_path %>
+</div>
